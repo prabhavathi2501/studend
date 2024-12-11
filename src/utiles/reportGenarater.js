@@ -3,6 +3,8 @@ import StudentModel from "../model/student.js";
 import SubjectModel from "../model/subject.js";
 
 
+
+//http://localhost:5004/mark/report/:id
 export const reportCardGenerator = async (req, res) => {
     try {
         

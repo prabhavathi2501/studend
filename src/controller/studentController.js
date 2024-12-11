@@ -1,6 +1,6 @@
 import StudentModel from "../model/student.js";
 
-
+//http://localhost:5004/student/create
 export const createStudent = async (req, res) => {
     try {
 
@@ -14,6 +14,8 @@ export const createStudent = async (req, res) => {
     }
 }
 
+
+//http://localhost:5004/student/getstudent
 export const getStudent = async (req, res) => {
     try {
         const studend = await StudentModel.find();
@@ -25,6 +27,8 @@ export const getStudent = async (req, res) => {
     }
 }
 
+
+//http://localhost:5004/student/:id
 export const getbyIyStudent = async (req, res) => {
     try {
         const studentId = req.params.id;
@@ -47,6 +51,8 @@ export const getbyIyStudent = async (req, res) => {
     }
 }
 
+
+//http://localhost:5004/student/edit/:id
 export const editStudent = async (req, res) => {
     try {
         const studentedit = req.params.id;
@@ -73,6 +79,8 @@ export const editStudent = async (req, res) => {
 
 }
 
+
+//http://localhost:5004/student/:id
 export const deletestudent= async(req,res)=>{
     try {
 

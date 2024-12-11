@@ -1,7 +1,7 @@
 import SubjectModel from "../model/subject.js";
 
 
-
+//http://localhost:5004/sub/create
 export const createsubject = async (req, res) => {
     try {
         const subject = new SubjectModel(req.body);
@@ -14,7 +14,7 @@ export const createsubject = async (req, res) => {
     }
 }
 
-
+//http://localhost:5004/sub/getsub
 export const getsubject = async (req, res) => {
     try {
         const subject = await SubjectModel.find();
@@ -27,7 +27,7 @@ export const getsubject = async (req, res) => {
     }
 }
 
-
+//http://localhost:5004/sub/:id
 export const getbyIdSubject = async (req, res) => {
     try {
         const subjectId = req.params.id;
@@ -43,7 +43,7 @@ export const getbyIdSubject = async (req, res) => {
         res.status(500).send({ message: "internal sever error" })
     }
 }
-
+//http://localhost:5004/sub/edit/:id
 export const editsubject = async (req, res) => {
     try {
         const subjectId = req.params.id;
@@ -64,6 +64,8 @@ export const editsubject = async (req, res) => {
 
 }
 
+
+//http://localhost:5004/sub/:id
 export const deletesubject = async (req, res) => {
     try {
         const subjectId = req.params.id;

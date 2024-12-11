@@ -1,6 +1,6 @@
 import MarksModel from "../model/mark.js";
 
-
+//http://localhost:5004/mark/create
 export const createMark = async(req,res)=>{
     try {
         
@@ -14,6 +14,8 @@ export const createMark = async(req,res)=>{
     }
 }
 
+
+//http://localhost:5004/mark/getmark
 export const getmark=async(req,res)=>{
    try {
     const mark=await MarksModel.find().populate("student".name).populate("subject".name);
