@@ -2,9 +2,10 @@ import MarksModel from "../model/mark.js";
 
 //http://localhost:5004/mark/create
 export const createMark = async(req,res)=>{
+    console.log(req.body);
     try {
-        
-        const marks=new MarksModel(req.body);
+        const {student,mark,subject}=req.body;
+        const marks=new MarksModel(student,mark,subject);
         await marks.save();
         res.status(201).json({
             message: "mark create successs"

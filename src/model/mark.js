@@ -10,15 +10,17 @@ const markSchema = new mongoose.Schema({
         require:true
     },
     subject:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Subject",
+        // type:mongoose.Schema.Types.ObjectId,
+        type:String,
+        // ref:"Subject",
         require:true
 
 
     },
     student:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Student",
+        // type:mongoose.Schema.Types.ObjectId,
+        type:String,
+        // ref:"Student",
         require:true
 
     }

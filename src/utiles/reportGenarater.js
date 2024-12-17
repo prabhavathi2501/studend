@@ -15,7 +15,8 @@ export const reportCardGenerator = async (req, res) => {
             return res.status(404).json({ message: "Student not found" });
         }
         //fetch marks for student
-        const marks = await MarkModel.find({ student: studentId }).populate("subject", "name");
+        const marks = await MarkModel.find({ student: studentId })
+        console.log(marks);
         if(!marks.length){
             return res.status(404).json({ message: "Marks not found" });
         }
